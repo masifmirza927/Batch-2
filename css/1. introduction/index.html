@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css learning</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        h1 {
+            background-color: gold;
+            color: blue !important ;
+        }
+        h1 {
+            background-color: brown;
+        }
+        /* #myid {
+            color: blue;
+        }
+        .mypara {
+            color: #FC4100;
+        } */
+        /*
+        descendant selector (space)
+        child selector (>)
+        adjacent sibling selector (+)
+        general sibling selector (~)
+        */
+
+        /*
+
+        */
+
+
+      
+       /* .box p {
+        color: blue;
+       } */
+       p {
+            color: red;
+        }
+        /* .box  p {
+            color: blue;
+        } */
+
+        .box + h2 {
+            color: red;
+        }
+        /* .list li:first-child {
+            color: red;
+        }
+        .list li:last-child {
+            color: rgb(162, 246, 5);
+        }
+
+        .list li:nth-child(3) {
+            font-size: 20px;
+            color: red;
+        } */
+        /* .list li:nth-child(odd) {
+            color: red;
+        } */
+
+        .box > p {
+            background-color: gold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <style>
+
+        /* .parent::selection {
+            color: rgb(253, 219, 0);
+            font-size: 20px;
+        } */
+        .parent {
+            width: 60px;
+            height: 60px;
+            background-color: gold;
+            position: relative;
+            cursor: pointer;
+            
+        }
+        .parent::before {
+            content: "";
+            height: 6px;
+            width: 0%;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            left: 0px;
+            bottom: -4px;
+            transition: all .5s ease;
+        }
+        .parent:hover::before {
+            width: 100%;
+        } 
+        .parent2 {
+            margin: 10px;
+            width: 60px;
+            height: 60px;
+            background-color: gold;
+        }
+        /* .parent2 {
+            position: relative;
+        }
+        .onlineStatus {
+            width: 0px;
+            height: 10px;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            left: 0px;
+            bottom: -10px;
+        } */
+    </style>
+    <!-- pseudo elements -->
+
+    <div class="parent">
+        
+    </div>
+
+    <div class="parent2">
+        <div class="onlineStatus"></div>
+    </div>
+
+    <h1 style="color: red;">Hello world</h1>
+    <h1>Hello wolrd 2</h1>
+
+    <p class="mypara" id="myid">this is first para</p>
+    <p class="mypara">this is second  para</p>
+
+    <h2>Color blue</h2>
+    <h2>heading 2</h2>
+
+    <div class="box" data-aos="fade-left">
+        <p>direct child</p>
+        <div class="para">
+            <p class="para">paragraph inside another paragraph</p>
+        </div>
+        <h2>Color blue</h2>
+    </div>
+
+    <h2>Color blue</h2>
+    <h3>asdfasdf</h3>
+    <h2>heading 2</h2>
+
+
+    <!-- <ul class="list">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+    </ul> -->
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
