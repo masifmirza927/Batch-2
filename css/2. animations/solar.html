@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solar animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: fit-content;
+            /* border: 2px solid blue; */
+            position: relative;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            /* border: 2px solid red; */
+            animation-name: rotateAnim;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            /* border-radius: 50%; */
+            animation-timing-function: linear;
+            animation-direction: normal;
+        }
+
+        .earth {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-image: url('https://pngimg.com/uploads/earth/earth_PNG39.png');
+            background-size: contain;
+        }
+
+        .sun {
+            width: 80px;
+            height: 80px;
+            background-color: gold;
+            position: absolute;
+            /* border-radius: 50%; */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLgo8L-UF2NjZ8WNqeZ2Cl4Fm3pi27ZbAYMS5Ka4psqg&s');
+             background-size: contain;
+        }
+
+        @keyframes rotateAnim {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="earth"></div>
+        </div>
+        <div class="sun"></div>
+    </div>
+</body>
+
+</html>
